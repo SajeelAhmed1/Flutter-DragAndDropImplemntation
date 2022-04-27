@@ -26,7 +26,7 @@ class _mainpgState extends State<mainpg> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 const Text(
-                    "Scroll and select your item and then Drag it to you cart !",
+                    "Please select your item and then Drag it to you cart !",
                     style: TextStyle(
                         color: Color.fromARGB(255, 2, 7, 11),
                         fontSize: 25,
@@ -37,7 +37,7 @@ class _mainpgState extends State<mainpg> {
                 Row(
                   children: [
                     Draggable<String>(
-                      data: "tomato",
+                      data: "Tomato",
                       child: Container(
                           width: 130,
                           height: 130,
@@ -56,7 +56,7 @@ class _mainpgState extends State<mainpg> {
                           child: Image.asset("assets/images/tomato.png")),
                     ),
                     Draggable<String>(
-                      data: "carrot",
+                      data: "Carrot",
                       child: Container(
                           width: 130,
                           height: 130,
@@ -75,7 +75,7 @@ class _mainpgState extends State<mainpg> {
                           child: Image.asset("assets/images/carrot.png")),
                     ),
                     Draggable<String>(
-                      data: "chicken",
+                      data: "Chicken",
                       child: Container(
                           width: 112,
                           height: 130,
@@ -99,7 +99,7 @@ class _mainpgState extends State<mainpg> {
                 Row(
                   children: [
                     Draggable<String>(
-                      data: "eggs",
+                      data: "Eggs",
                       child: Container(
                           width: 130,
                           height: 130,
@@ -118,7 +118,7 @@ class _mainpgState extends State<mainpg> {
                           child: Image.asset("assets/images/eggs.png")),
                     ),
                     Draggable<String>(
-                      data: "milk",
+                      data: "Milk",
                       child: Container(
                           width: 130,
                           height: 130,
@@ -137,7 +137,7 @@ class _mainpgState extends State<mainpg> {
                           child: Image.asset("assets/images/milk.png")),
                     ),
                     Draggable<String>(
-                      data: "wheat",
+                      data: "Wheat",
                       child: Container(
                           width: 112,
                           height: 130,
@@ -163,11 +163,15 @@ class _mainpgState extends State<mainpg> {
                         width: 200,
                         height: 200,
                         child: Image.asset("assets/images/cart.png"))),
-                  ElevatedButton(onPressed: () {Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>  cartpage(cart:cart)),
-                          );}, child: const Text('Show Cart'))
+                ElevatedButton(
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => cartpage(cart: cart)),
+                      );
+                    },
+                    child: const Text('Show Cart'))
               ],
             ),
           ) // Foreground widget here

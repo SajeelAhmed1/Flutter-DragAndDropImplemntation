@@ -7,8 +7,6 @@ class cartpage extends StatelessWidget {
   const cartpage({Key? key, required this.cart}) : super(key: key);
 
   @override
-  
-  
   Widget build(BuildContext context) {
     return Scaffold(
         body: Container(
@@ -21,14 +19,18 @@ class cartpage extends StatelessWidget {
             child: Column(
               children: [
                 Image.asset("assets/images/cart.png"),
+                Text("These are the items in you cart",
+                    style: TextStyle(
+                        color: Color.fromARGB(255, 2, 7, 11),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w800)),
                 Expanded(
-            child: ListView.builder(
-                itemCount: cart.length,
-                itemBuilder: (BuildContext context, int index) {
-                  return Cardd(text: cart[index]);
-                }),
-        
-          ),
+                  child: ListView.builder(
+                      itemCount: cart.length,
+                      itemBuilder: (BuildContext context, int index) {
+                        return Cardd(text: cart[index]);
+                      }),
+                ),
                 ElevatedButton(
                     onPressed: () {
                       Navigator.push(
